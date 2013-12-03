@@ -1,2 +1,4 @@
 /node_modules/
 npm-debug.log
+public/decks/decoded/.sass-cache
+public/decks/brunel/.sass-cache
