@@ -12,7 +12,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <link rel="stylesheet" href="css/reveal.min.css">
+    <!-- <link rel="stylesheet" href="css/reveal.min.css"> -->
+    <link rel="stylesheet" href="css/reveal.dev.css">
     <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
     <!-- For syntax highlighting -->
@@ -45,8 +46,30 @@
           <h1 class="fragment">HTML</h1>
         </section>
 
+        <section data-transition="none">
+          <h2>Food</h2>
+          <h1 class="fragment">consume</h1>
+          <h4 class="fragment">produce</h4>
+        </section>
+
+        <!-- <section>
+          <h1>Internet</h1>
+        </section> -->
+
+        <section data-transition="none">
+          <h2>Food</h2>
+          <h4>consume</h4>
+          <h1>produce</h1>
+        </section>
+
         <section>
-          <h2>code</h2>
+          <h3 class="fragment">bread</h3>
+          <h1>Sandwich</h1>
+          <h3 class="fragment">bread</h3>
+        </section>
+
+        <section>
+          <!-- <h2>code</h2> -->
           <pre>
 <code contenteditable>
   &lt;bread&gt;
@@ -57,8 +80,67 @@
           </pre>
         </section>
 
+        <section data-transition="none">
+          <pre>
+<code contenteditable>
+  &lt;bread class="wholemeal"&gt;
+    ...
+  &lt;/bread&gt;
+  
+</code>
+          </pre>
+        </section>
+
+        <section data-transition="none">
+          <pre>
+<code contenteditable>
+  &lt;bread class="wholemeal sourdough"&gt;
+    ...
+  &lt;/bread&gt;
+  
+</code>
+          </pre>
+        </section>
+
+        <section data-transition="none">
+          <pre>
+<code contenteditable>
+  &lt;bread glutenfree class="wholemeal   sourdough"&gt;
+    ...
+  &lt;/bread&gt;
+  
+</code>
+          </pre>
+        </section> 
+
         <section>
-          <h2>more code</h2>
+          <h3>sourdough</h3> 
+          <div class="fragment">
+            <h1>≠</h1> 
+            <h3>sauerteig</h3>
+          </div>
+        </section> 
+
+        <section>
+          <h1>glutenfree</h1>
+        </section>  
+
+        <section>
+          <h3 class="quiet">bread</h3>
+          <div class="fragment">
+            <h4>chutney</h4>
+            <div class="fragment">
+              <h3>cheese</h3>
+              <h2 class="fragment">beetroot</h2>
+              <h3>cheese</h3>
+            </div>
+            <h4>chutney</h4>
+          </div>
+          <h3 class="quiet">bread</h3>
+        </section>
+
+        <section>
+          <!-- <h2>more code</h2> -->
           <pre>
 <code contenteditable>
   &lt;bread class="wholemeal"&gt;
@@ -73,8 +155,16 @@
           </pre>
         </section>
 
+
+
+
+
+
+
+        
+
         <section>
-          <h2>style</h2>
+          <!-- <h2>style</h2> -->
           <pre>
 <code contenteditable>
   spread.chutney
@@ -428,7 +518,8 @@
     </div>
 
     <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+    <!--<script src="js/reveal.min.js"></script>-->
+    <script src="js/reveal.dev.js"></script>
 
     <script>
 
@@ -436,12 +527,12 @@
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize(
       {
-        controls: true,
+        controls: false,
         progress: true,
         history: true,
         center: true,
         theme: 'baddeo', // Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: 'zoom', //  Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+        transition: Reveal.getQueryHash().transition || 'zoom', // default/cube/page/concave/zoom/linear/none
 
         // Optional libraries used to extend on reveal.js
         dependencies: 
@@ -455,6 +546,12 @@
           // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       })
+
+      /*Reveal.addEventListener( 'transition-none', function() 
+      {
+        console.log( '"transition-none" has fired' + window.location.search)
+        window.location.search = '?transition=none'
+      })*/
 
     </script>
 
