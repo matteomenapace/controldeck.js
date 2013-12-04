@@ -183,13 +183,16 @@ body
 
 		code
 		{
-			padding: 0;
+			padding: 0 12px;
 			background: rgba($blue, 0.1);
 			color: inherit;
 			border-radius: 24px;
 			transition: 0.6s background ease;
-			max-height: auto;
+			max-height: 100%;
 			word-wrap: break-word;
+			font-family: 'Museo700';
+			word-spacing: 0.1em;
+			letter-spacing: 0.03em;
 
 			&:focus
 			{
